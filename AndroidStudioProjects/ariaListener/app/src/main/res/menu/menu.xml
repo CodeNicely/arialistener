@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ariaListener="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/action_shuffle"
+        android:icon="@drawable/"
+        android:orderInCategory="1"
+        ariaListener:showAsAction="always"
+        android:title="Shuffle"/>
+
+    <item
+        android:id="@+id/action_end"
+
+        android:orderInCategory="2"
+        ariaListener:showAsAction="always"
+        android:title="End"/>
+</menu>
