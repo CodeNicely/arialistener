@@ -3,15 +3,16 @@
     xmlns:ariaListener="http://schemas.android.com/tools">
     <item
         android:id="@+id/action_shuffle"
-        android:icon="@drawable/"
+        android:icon="@android:drawable/ic_popup_sync"
         android:orderInCategory="1"
         ariaListener:showAsAction="always"
         android:title="Shuffle"/>
 
     <item
         android:id="@+id/action_end"
-
+        android:icon="@android:drawable/button_onoff_indicator_off"
         android:orderInCategory="2"
         ariaListener:showAsAction="always"
         android:title="End"/>
+
 </menu>

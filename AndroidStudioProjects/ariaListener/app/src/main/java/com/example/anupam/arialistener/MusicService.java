@@ -1,3 +1,4 @@
+/*
 package com.example.anupam.arialistener;
 
 import android.app.Service;
@@ -17,10 +18,13 @@ import android.app.Notification;
 import android.app.PendingIntent;
 
 
+*/
 /**
  * Created by Anupam on 10/15/2016.
- */
-public abstract class MusicService extends Service implements MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener,
+ *//*
+
+
+public class MusicService extends Service implements MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener,
         MediaPlayer.OnCompletionListener {
 
     //media player
@@ -30,7 +34,7 @@ public abstract class MusicService extends Service implements MediaPlayer.OnPrep
     //current position
     private int songPosn;
     private final IBinder musicBind = new MusicBinder();
-    private String songTitle=&quot;&quot;;
+    private String songTitle=&quot;
     private static final int NOTIFY_ID=1;
     private boolean shuffle=false;
     private Random rand;
@@ -80,12 +84,14 @@ public abstract class MusicService extends Service implements MediaPlayer.OnPrep
 //create player
         player = new MediaPlayer();
         rand=new Random();
+        initMusicPlayer();
     }
 
     public void initMusicPlayer(){
         player.setWakeMode(getApplicationContext(),
                 PowerManager.PARTIAL_WAKE_LOCK);
         player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+
         player.setOnPreparedListener(this);
         player.setOnCompletionListener(this);
         player.setOnErrorListener(this);
@@ -162,7 +168,7 @@ public abstract class MusicService extends Service implements MediaPlayer.OnPrep
     //skip to next
     public void playNext(){
         songPosn++;
-        if(songPosn&gt;=songs.size()) songPosn=0;
+        if(songPosn&gt);songs.size(); songPosn=0;
         playSong();
     }
 
@@ -205,3 +211,4 @@ public abstract class MusicService extends Service implements MediaPlayer.OnPrep
         }
     }
 }
+*/

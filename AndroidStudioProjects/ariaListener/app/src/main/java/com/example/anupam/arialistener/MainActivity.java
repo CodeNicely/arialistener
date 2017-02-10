@@ -1,5 +1,6 @@
 package com.example.anupam.arialistener;
 
+import android.app.Activity;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,21 +11,13 @@ import android.net.Uri;
 import android.content.ContentResolver;
 import android.database.Cursor;
 import android.widget.ListView;
-import android.os.IBinder;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.view.MenuItem;
-import android.view.View;
-import com.example.anupam.arialistener.MusicService.MusicBinder;
-import android.widget.MediaController.MediaPlayerControl;
 
-public class MainActivity extends AppCompatActivity implements MediaPlayerControl {
+public class MainActivity extends Activity {
 
     private ArrayList<song> songlist;
     private ListView songView;
-    private MusicService musicSrv;
+//    private MusicService musicSrv;
     private Intent playIntent;
     private boolean musicBound=false;
     private MusicController controller;
@@ -47,9 +40,9 @@ public class MainActivity extends AppCompatActivity implements MediaPlayerContro
 
         SongAdapter songAdt = new SongAdapter(this, songlist);
         songView.setAdapter(songAdt);
-        setController();
+//        setController();
     }
-
+/*
     private ServiceConnection musicConnection = new ServiceConnection(){
 
         @Override
@@ -60,13 +53,16 @@ public class MainActivity extends AppCompatActivity implements MediaPlayerContro
             //pass list
             musicSrv.setList(songlist);
             musicBound = true;
-        }
+        }*/
+/*
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
             musicBound = false;
         }
     };
+*/
+/*
 
     @Override
     protected void onStart() {
@@ -77,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayerContro
             startService(playIntent);
         }
     }
+*/
 
     public void getsonglist() {
 
@@ -103,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayerContro
 }
     }
 
+/*
     public void songPicked(View view){
 
         musicSrv.setSong(Integer.parseInt(view.getTag().toString()));
@@ -146,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayerContro
 
     @Override
     public int getDuration() {
-        if(musicSrv!=null &amp;&amp; musicBound &amp;&amp; musicSrv.isPng())
+        if(musicSrv!=null & amp);&amp; musicBound &amp;&amp; musicSrv.isPng())
         return musicSrv.getDur();
         else return 0;
     }
@@ -262,5 +260,6 @@ public class MainActivity extends AppCompatActivity implements MediaPlayerContro
         musicSrv.pausePlayer();
     }
 
+*/
 
 }
